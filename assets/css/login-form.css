@@ -1,0 +1,275 @@
+:root {
+    --text-base: #afb6c2;
+    --text-title: #d4ccb6;
+    --background: #191816;
+    --form-background: #24221f;
+    --input-border: #868686;
+    --primary-color: #ffc632;
+    --button-text-color: #473404;
+
+    font-size: 62.5%;
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.main-page {
+  display: flex;
+}
+
+.main-page main {
+  background-color: var(--background);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main-page img {
+  width: 50%;
+  height: 100vh;
+}
+
+/* HEADER */
+
+.main-page main .logo-header {
+  width: 100%;
+}
+
+.logo-header h1 a img {
+  width: 11.5rem;
+  height: 2.8rem;
+
+  margin: 4rem 0 0 4rem;
+}
+
+/* TELA DE LOGIN */
+
+.main-page main .login {
+  background-color: var(--form-background);
+  width: 85%;
+  margin: auto auto;
+  border-radius: 0.4rem;
+
+  padding: 5.5rem 11.9rem;
+}
+
+.login .login-content h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.4rem;
+
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+
+  color: var(--text-title);
+}
+
+.login .login-content h2 img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.login .login-content p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 2.7rem;
+
+  color: var(--text-base);
+}
+
+.login .login-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login .login-content form label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+
+  color: var(--text-base);
+
+  margin-bottom: 0.5rem;
+}
+
+.login .login-content form input {
+  background-color: transparent;
+  border: 1px solid var(--input-border);
+  color: var(--text-base);
+  font-size: 1.4rem;
+
+  padding: 1.2rem;
+  border-radius: 0.4rem;
+  outline: none;
+
+  margin-bottom: 2rem;
+}
+
+.login .login-content form input#email {
+  background-image: url(../images/mail.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position-x: 1.2rem;
+
+  padding-left: 3.7rem;
+
+}
+
+.login .login-content form input#email:focus {
+  background-image: url(../images/mail-focus.svg);
+}
+
+.login .login-content form input#senha {
+  background-image: url(../images/lock.svg), url(../images/eye.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: left, right;
+  background-position-x: 1.2rem, calc(100% - 1.2rem);
+
+  padding-left: 3.7rem;
+  padding-right: 4.5rem;
+}
+
+.login .login-content form input#senha:focus {
+  background-image: url(../images/lock-focus.svg), url(../images/eye-focus.svg);
+}
+
+.login .login-content form input::placeholder {
+  color: var(--text-base);
+}
+
+.login .login-content form input:focus {
+  border: 0.2rem solid var(--primary-color);
+}
+
+.login .login-content form .utilities {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.login .login-content form .utilities .remind {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.login .login-content form .utilities .remind label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+
+  color: var(--text-base);
+  cursor: pointer;
+
+  margin-top: 0.3rem;
+}
+
+.login .login-content form .utilities .remind input {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+
+  border: 1px solid var(--input-border);
+}
+
+.login .login-content form .utilities .remind input:checked {
+  background-color: var(--primary-color);
+  background-image: url(../images/check.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.login .login-content form .utilities a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+
+  color: var(--primary-color);
+  text-decoration: none;
+
+  margin-top: 0.3rem;
+}
+
+.login .login-content form button {
+  background-color: var(--primary-color);
+  border-radius: 0.4rem;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  color: var(--button-text-color);
+
+  padding: 1.2rem 0;
+  margin-bottom: 1.4rem;
+  cursor: pointer;
+}
+
+.login .login-content form button:hover {
+  filter: brightness(1.1);
+}
+
+.login .login-content form p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+
+  color: var(--primary-color);
+
+  text-align: center;
+}
+
+.login .login-content form a {
+  font-weight: bold;
+  color: var(--primary-color);
+
+  text-decoration: none;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1250px) {
+  .main-page img {
+    width: 0;
+  }
+
+  .main-page main {
+    width: 100%;
+  }
+}
+
+@media (max-width: 630px) {
+  .main-page main {
+    align-items: center;
+  }
+
+  .main-page main .login {
+    background-color: transparent;
+    padding: 3rem 0;
+
+    margin: 0;
+  }
+
+  .logo-header h1 a img {
+    margin: 4rem 0 0 2.5rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .login .login-content p,
+  .login .login-content form label,
+  .login .login-content form .utilities .remind label {
+    font-size: 1.3rem;
+  }
+
+  .login .login-content form .utilities a,
+  .login .login-content form p {
+    font-size: 1.1rem;
+  }
+}
